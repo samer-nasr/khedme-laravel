@@ -9,6 +9,14 @@ class Review extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'booking_id',
+        'customer_id',
+        'service_provider_id',
+        'rating',
+        'review',
+    ];
+
     // A review belongs to a customer (User)
     public function customer()
     {
