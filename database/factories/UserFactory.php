@@ -24,14 +24,39 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'remember_token' => Str::random(10),
+            'first_name' => $this->faker->firstName,
+            'last_name' => $this->faker->lastName,
+            'email' => $this->faker->unique()->safeEmail,
+            'phone' => $this->faker->phoneNumber,
+            'address' => $this->faker->address,
+            'password' => Hash::make('password'), // default password
+            'role' => $this->faker->randomElement(['customer', 'service_provider']),
+            'service_type' => $this->faker->randomElement(['plumbing', 'cleaning', 'electrician', 'gardening']),
+            'rating' => $this->faker->optional()->randomFloat(2, 1, 5), // Optional rating for service providers
+            'availability' => $this->faker->boolean(80), // 80% chance of being available
         ];
     }
 
+    public function customer()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 'customer',
+                'service_type' => null,
+                'rating' => null,
+                'availability' => null,
+            ];
+        });
+    }
+
+    public function serviceProvider()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 'service_provider',
+            ];
+        });
+    }
     /**
      * Indicate that the model's email address should be unverified.
      */
