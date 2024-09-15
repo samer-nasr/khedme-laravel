@@ -7,8 +7,11 @@ use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use Illuminate\Auth\TokenGuard;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 
 Route::post('/register', [RegisteredUserController::class, 'store']);
@@ -25,8 +28,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/services/{id}', [ServiceController::class, 'show']);
 
     // Bookings API routes
-    Route::post('/bookings', [BookingController::class, 'store']);
+    Route::post('/add_booking', [BookingController::class, 'store']);
     Route::get('/bookings', [BookingController::class, 'index']);
+    Route::get('/bookings/{id}', [BookingController::class, 'show']);   
+
 
     // Payments API routes
     Route::post('/payments', [PaymentController::class, 'store']);

@@ -9,6 +9,14 @@ class Booking extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'customer_id',
+        'service_provider_id',
+        'service_id',
+        'status',
+        'scheduled_date'
+    ];
+
     // A booking belongs to a customer (User)
     public function customer()
     {

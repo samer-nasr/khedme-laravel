@@ -21,6 +21,7 @@ class RegisteredUserConstroller extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+
         $user = User::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
@@ -32,10 +33,10 @@ class RegisteredUserConstroller extends Controller
 
         event(new Registered($user));
 
+
         // Auto-login user after registration and issue token
         $token = $user->createToken('API Token')->plainTextToken;
 
-        dd($token);
 
         return response()->json([
             'user' => $user,

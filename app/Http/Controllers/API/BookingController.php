@@ -13,6 +13,11 @@ class BookingController extends Controller
         return response()->json(Booking::all());
     }
 
+    public function show($id)
+    {
+        return response()->json(Booking::findOrFail($id));
+    }
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
