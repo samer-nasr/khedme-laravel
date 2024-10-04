@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\service;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,11 @@ class BookingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'customer_id' => User::factory()->customer()->create()->id, // Create a customer and get its ID
+            'service_provider_id' => User::factory()->serviceProvider()->create()->id, // Create a service provider and get its ID
+            'service_id' => Service::factory()->create()->id, // Create a service and get its ID
+            'status' => $this->faker->randomElement(['pending', 'confirmed', 'completed', 'cancelled']),
+            'scheduled_date' => $this->faker->dateTimeBetween('+1 days', '+1 month'), // Schedule date between tomorrow and next month
         ];
     }
 }

@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class , 'index'])->name('homePage');
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

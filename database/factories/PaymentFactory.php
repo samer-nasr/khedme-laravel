@@ -6,9 +6,9 @@ use App\Models\Booking;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Review>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Payment>
  */
-class ReviewFactory extends Factory
+class PaymentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,15 +18,16 @@ class ReviewFactory extends Factory
     public function definition(): array
     {
         return [
+            'booking_id' => Booking::factory(), // Create a related booking
             'customer_id' => function (array $attributes) {
                 return Booking::find($attributes['booking_id'])->customer_id;
             },
             'service_provider_id' => function (array $attributes) {
                 return Booking::find($attributes['booking_id'])->service_provider_id;
             },
-            'booking_id' => Booking::factory()->create()->id, // Create a related booking
-            'rating' => $this->faker->numberBetween(1, 5), // Rating between 1 and 5
-            'review' => $this->faker->optional()->sentence, // Optional review text
+            'amount' => $this->faker->randomFloat(2, 50, 500), // Payment amount
+            'payment_method' => $this->faker->randomElement(['credit_card', 'cash']),
+            'payment_status' => $this->faker->randomElement(['pending', 'completed', 'failed']),
         ];
     }
 }
