@@ -19,7 +19,7 @@ Route::post('/register', [RegisteredUserConstroller::class, 'store']);
 Route::post('/login', [AuthenticatedSessionConstroller::class, 'login']);
 Route::post('/logout', [AuthenticatedSessionConstroller::class, 'logout']);
 
-// Route::middleware('auth:sanctum')->group(function () {
+Route::middleware('auth:sanctum')->group(function () {
 // User API routes
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/{id}', [UserController::class, 'show']);
@@ -46,7 +46,7 @@ Route::post('/add_review', [ReviewControlle::class, 'store']);
 Route::get('/get_reviews', [ReviewControlle::class, 'index']);
 Route::get('/get_reviews/{id}', [ReviewControlle::class, 'show']);
 
-// });
+});
 
 
 
