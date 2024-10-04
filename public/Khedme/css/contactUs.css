@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #22323f;
+    color: #bfc4c9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+.contact-image {
+    width: 300px;
+    height: auto;
+    margin-left: 250px;
+}
+
+.contact-image:hover {
+    transform: scale(1.05);
+}
+
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+.right-section h1 {
+    color: #bfc4c9;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.contact-phone,
+.contact-Email,
+.contact-Social {
+    margin-bottom: 30px;
+}
+
+.contact-phone h2,
+.contact-Email h2,
+.contact-Social h2 {
+    color: #bfc4c9;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+h2:hover {
+    color: #2ab0c3;
+    transform: scale(1.05);
+}
+
+.contact-phone p,
+.contact-Email p {
+    background-color: #bfc4c9;
+    padding: 10px;
+    border-radius: 8px;
+    color: #22323f;
+    font-weight: bold;
+    font-size: 16px;
+    width: fit-content;
+}
+
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(10%) saturate(250%) hue-rotate(190deg) brightness(94%) contrast(88%);
+    transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(10%) saturate(250%) hue-rotate(190deg) brightness(100%) contrast(100%);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #22323f;
+    color: #bfc4c9;
+}
+
+footer p {
+    font-size: 14px;
+}
