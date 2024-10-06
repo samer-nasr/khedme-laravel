@@ -7,7 +7,7 @@ use App\Http\Controllers\API\RegisteredUserConstroller;
 use App\Http\Controllers\API\ReviewControlle;
 use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\UserController;
-
+use App\Http\Controllers\api\WorkersController;
 use Illuminate\Auth\TokenGuard;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Http\Request;
@@ -28,6 +28,12 @@ Route::get('/users/{id}', [UserController::class, 'show']);
 Route::get('/services', [ServiceController::class, 'index']);
 Route::get('/services/{id}', [ServiceController::class, 'show']);
 Route::post('/add_service', [ServiceController::class, 'store']);
+
+//Workers API routes
+Route::get('/workers', [WorkersController::class, 'show']);
+Route::get('/workers/{service}', [WorkersController::class, 'show_by_service']);
+
+
 
 // Bookings API routes
 Route::post('/add_booking', [BookingController::class, 'store']);

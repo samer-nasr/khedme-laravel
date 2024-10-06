@@ -18,10 +18,10 @@
 
 
                 <ul>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="wwu.html">Work with Us</a></li>
-                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="{{ route('about_us')}}">About Us</a></li>
+                    <li><a href="{{ route('services')}}"">Services</a></li>
+                    <li><a href="{{ route('work_with_us')}}">Work with Us</a></li>
+                    <li><a href="{{ route('contact_us')}}">Contact Us</a></li>
 
 
                 </ul>
