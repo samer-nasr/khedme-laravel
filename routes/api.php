@@ -41,6 +41,7 @@ Route::get('/bookings', [BookingController::class, 'index']);
 Route::get('/bookings/{id}', [BookingController::class, 'show']);
 
 
+
 // Payments API routes
 Route::post('/add_payment', [PaymentController::class, 'store']);
 Route::get('/get_payments', [PaymentController::class, 'index']);
