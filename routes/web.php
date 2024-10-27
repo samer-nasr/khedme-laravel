@@ -15,6 +15,8 @@ Route::get('/work_with_us',[HomeController::class , 'work_with_us'])->name('work
 
 Route::get('/contact_us',[HomeController::class , 'contact_us'])->name('contact_us');
 
+Route::get('/join_us',[HomeController::class , 'join_us'])->name('join_us');
+
 
 
 Route::get('/dashboard', function () {

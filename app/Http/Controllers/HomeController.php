@@ -32,5 +32,10 @@ class HomeController extends Controller
         return view('contact_us');
     }
 
+    public function join_us()
+    {
+        return view('join_us');
+    }
+
 
 }

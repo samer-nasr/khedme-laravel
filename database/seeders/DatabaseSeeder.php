@@ -28,9 +28,39 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->count(10)->customer()->create();
         User::factory()->count(5)->serviceProvider()->create();
-        service::factory()->count(5)->create();
+
+
+        // service::factory()->count(5)->create();
+        service::factory()->create([
+            'name' => 'Plumber',
+        ]);
+
+        service::factory()->create([
+            'name' => 'Cleaner',
+        ]);
+
+        service::factory()->create([
+            'name' => 'Electrican',
+        ]);
+
+        service::factory()->create([
+            'name' => 'Painter',
+        ]);
+
+        service::factory()->create([
+            'name' => 'Pest Control Specialist',
+        ]);
+
+        service::factory()->create([
+            'name' => 'HVAC Technician',
+        ]);
+
+
+
         Booking::factory()->count(10)->create();
+
         Payment::factory()->count(10)->create();
+
         Review::factory()->count(10)->create();
     }
 }

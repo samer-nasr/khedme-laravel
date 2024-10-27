@@ -12,7 +12,7 @@
 
     <!-- Navbar with Logo -->
     <nav>
-        <a href="index.html">
+        <a href="{{ route('homePage') }}">
             <img src="{{ asset('Khedme/Photos/Logo1.png')}}" alt="logo" class="logo">
         </a>
     </nav>

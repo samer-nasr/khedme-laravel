@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <title>Khedme - Home Services</title>
     <link rel="stylesheet" href="{{ asset('Khedme/css/styles.css')}}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body>
@@ -20,8 +22,13 @@
                 <ul>
                     <li><a href="{{ route('about_us')}}">About Us</a></li>
                     <li><a href="{{ route('services')}}"">Services</a></li>
-                    <li><a href="{{ route('work_with_us')}}">Work with Us</a></li>
+                    <li><a href=" {{ route('work_with_us')}}">Work with Us</a></li>
                     <li><a href="{{ route('contact_us')}}">Contact Us</a></li>
+                    @auth
+                    <div class="drop_down">
+                        @include('layouts.navigation')
+                    </div>
+                    @endauth
 
 
                 </ul>

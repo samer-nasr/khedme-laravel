@@ -33,14 +33,13 @@ Route::post('/add_service', [ServiceController::class, 'store']);
 Route::get('/workers', [WorkersController::class, 'show']);
 Route::get('/workers/{service}', [WorkersController::class, 'show_by_service']);
 
-
-
 // Bookings API routes
 Route::post('/add_booking', [BookingController::class, 'store']);
 Route::get('/bookings', [BookingController::class, 'index']);
 Route::get('/bookings/{id}', [BookingController::class, 'show']);
 Route::get('/bookings/service_provider/{id}', [BookingController::class, 'show_service_provider_bookings']);
 Route::get('/bookings/customer/{id}', [BookingController::class, 'show_customer_bookings']);
+Route::get('/bookings_services', [BookingController::class, 'show_services_bookings']);
 
 
 
