@@ -187,6 +187,80 @@ h1 {
 
 }
 
+.download-section {
+    padding: 50px 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.download-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.download-text {
+    max-width: 50%;
+    flex: 1;
+}
+
+.download-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    background-color: #00c6ab;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.store-buttons {
+    display: flex;
+    /* position: absolute; */
+    right: 100px;
+
+}
+
+.store-link img {
+    width: 150px;
+}
+
+.download-image {
+    max-width: 40%;
+    flex: 1;
+    text-align: right;
+}
+
+.download-image img {
+    height: 500px;  /* Adjust the height to make the image longer */
+    max-width: auto; /* Set max-width to auto to prevent distortion */
+    width: auto;     /* Maintain the original width to keep the aspect ratio */
+    padding-right: 200px;
+
+
+}
+
+.store-link2 img {
+    width: 150px;
+    height: 50px;
+}
+
+
+
 /* Footer */
 footer {
     text-align: center;
@@ -201,6 +275,13 @@ footer p {
 
 
 /* Social Icons */
+
+.social-icons
+{
+    display: flex;
+    justify-content: center;
+}
+
 .social-icons img {
     width: 30px;
     margin: 0 10px;
@@ -212,4 +293,3 @@ footer p {
 .social-icons img:hover {
     filter: brightness(0) saturate(100%) invert(85%) sepia(10%) saturate(250%) hue-rotate(190deg) brightness(100%) contrast(100%);
 }
-

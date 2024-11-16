@@ -21,15 +21,16 @@
 
                 <ul>
                     <li><a href="{{ route('about_us')}}">About Us</a></li>
-                    <li><a href="{{ route('services')}}"">Services</a></li>
+                    <li><a href="{{ route('services')}}">Services</a></li>
                     <li><a href=" {{ route('work_with_us')}}">Work with Us</a></li>
                     <li><a href="{{ route('contact_us')}}">Contact Us</a></li>
-                    @auth
-                    <div class="drop_down">
-                        @include('layouts.navigation')
-                    </div>
-                    @endauth
-
+                    <li>
+                        @auth
+                        <div>
+                            @include('layouts.navigation')
+                        </div>
+                        @endauth
+                    </li>
 
                 </ul>
             </nav>
@@ -62,16 +63,25 @@
         </div>
         </div>
     </header>
+
+    <div class="download-section">
+        <div class="download-content">
+            <div class="download-text">
+                <h2>Download our app now.</h2>
+                <a href="#" class="download-button">Download the App</a>
+            </div>
+            <div class="download-image">
+                <img src="{{asset('Khedme/Photos/mobilephoto.png')}}" alt="App on Mobile">
+            </div>
+        </div>
+    </div>
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Khedme | All rights reserved</p>
         <div class="social-icons">
             <a href="404.html"><img src="{{ asset('Khedme/Photos/tiktok.svg') }}" class="icon" alt="Tiktok"></a>
-
             <a href="404.html"><img src="{{ asset('Khedme/Photos/instagram.svg') }}" alt="Instagram"></a>
-
             <a href="404.html"><img src="{{ asset('Khedme/Photos/twitter-x.svg') }}" alt="Twitter"></a>
-
         </div>
     </footer>
 

@@ -1,7 +1,9 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 ">
+{{-- <nav x-data="{ open: false }" class="bg-white border-b border-gray-100 "> --}}
+<nav x-data="{ open: false }" class="">
+
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-center h-16">
             {{-- <div class="flex">
                 <!-- Logo -->
                 <div class="flex items-center shrink-0">
@@ -22,7 +24,7 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
+                        <button class="inline-flex items-center px-3 py-2 text-lg font-medium leading-4 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-blue-700 focus:outline-none">
                             <div>{{ Auth::user()->first_name }}</div>
 
                             <div class="ms-1">

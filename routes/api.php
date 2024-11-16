@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-
+// Auth Apis
 Route::post('/register', [RegisteredUserConstroller::class, 'store']);
 Route::post('/login', [AuthenticatedSessionConstroller::class, 'login']);
 Route::post('/logout', [AuthenticatedSessionConstroller::class, 'logout']);
@@ -42,7 +42,6 @@ Route::get('/bookings/customer/{id}', [BookingController::class, 'show_customer_
 Route::get('/bookings_services', [BookingController::class, 'show_services_bookings']);
 
 
-
 // Payments API routes
 Route::post('/add_payment', [PaymentController::class, 'store']);
 Route::get('/get_payments', [PaymentController::class, 'index']);
@@ -55,12 +54,3 @@ Route::get('/get_reviews', [ReviewControlle::class, 'index']);
 Route::get('/get_reviews/{id}', [ReviewControlle::class, 'show']);
 
 // });
-
-
-
-Route::get('/test', function () {
-    dd('test');
-});
-
-// Route::get('/users', [UserController::class, 'index']);
-// Route::get('/bookings', [BookingController::class, 'index']);

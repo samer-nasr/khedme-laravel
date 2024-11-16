@@ -26,27 +26,27 @@
 
     <!-- Services Section -->
     <div class="services-container">
-        <div class="service" onclick="window.location.href='404.html';">
+        <div class="service" onclick="window.location.href='{{ route('service_page','plumber') }}';">
             <img src="{{asset('Khedme/Photos/Plumber.png')}}" alt="Plumber">
             <h2>Plumber</h2>
         </div>
-        <div class="service" onclick="window.location.href='404.html';">
+        <div class="service" onclick="window.location.href='{{ route('service_page','cleaner') }}';">
             <img src="{{asset('Khedme/Photos/Cleaner.png')}}" alt="Cleaner">
             <h2>Cleaner</h2>
         </div>
-        <div class="service" onclick="window.location.href='404.html';">
+        <div class="service" onclick="window.location.href='{{ route('service_page','electrician') }}';">
             <img src="{{asset('Khedme/Photos/Electrician.png')}}" alt="Electrician">
             <h2>Electrician</h2>
         </div>
-        <div class="service" onclick="window.location.href='404.html';">
+        <div class="service" onclick="window.location.href='{{ route('service_page','painter') }}';">
             <img src="{{asset('Khedme/Photos/Painter.png')}}" alt="Painter">
             <h2>Painter</h2>
         </div>
-        <div class="service" onclick="window.location.href='404.html';">
+        <div class="service" onclick="window.location.href='{{ route('service_page','pest control specialist') }}';">
             <img src="{{asset('Khedme/Photos/PestControle.png')}}" alt="Pest Control Specialist">
             <h2>Pest Control Specialist</h2>
         </div>
-        <div class="service" onclick="window.location.href='404.html';">
+        <div class="service" onclick="window.location.href='{{ route('service_page','hvac technician') }}';">
             <img src="{{asset('Khedme/Photos/HVACtechnician.png')}}" alt="HVAC technician">
             <h2>HVAC Technician</h2>
         </div>

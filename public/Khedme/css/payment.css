@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2A3B4C;
+    margin: 0;
+}
+/* Navigation Logo */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    margin: 0%;
+}
+
+nav .logo {
+    width: 170px;
+    height: auto;
+    cursor: pointer;
+}
+
+.container {
+    width: 500px; /* Adjusted to fit content better */
+    padding: 30px;
+    background-color: #3A3A3A;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+}
+
+.header {
+    font-size: 24px;
+    color: #00BFFF;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 120px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px; /* Adjusted to reduce spacing */
+    background-color: #00BFFF;
+    color: #333;
+    width: 60px; /* Set a specific width */
+}
+
+.card-icon {
+    width: 40px; /* Adjusted to fit within the container */
+    height: 30px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.pay-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #00BFFF;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pay-button .lock-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
