@@ -31,10 +31,13 @@ class ServiceController extends Controller
 
         $service = service::create($validated_data);
 
-        return response()->json($service,201);
+        return response()->json([
+            'message' => 'Service Created Successfully!',
+            'data' => $service
+        ],200);
     }
 
-    
+
 
 
 }

@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 // Auth Apis
 Route::post('/register', [RegisteredUserConstroller::class, 'store']);
 Route::post('/login', [AuthenticatedSessionConstroller::class, 'login']);
-Route::post('/logout', [AuthenticatedSessionConstroller::class, 'logout']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthenticatedSessionConstroller::class, 'logout']);
+});
 
 // Route::middleware('auth:sanctum')->group(function () {
 // User API routes
