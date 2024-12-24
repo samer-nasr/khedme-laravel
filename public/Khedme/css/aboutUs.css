@@ -1,0 +1,226 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #22323f;
+    color: #bfc4c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Navigation Logo */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+nav .logo {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    /* Shows that the logo is clickable */
+}
+
+/* Header Section */
+.header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 0px;
+    /* Reduced space below header */
+    margin-bottom: 0px;
+    /* Reduced spacing between About Us and the rest of the content */
+}
+
+.header h1 {
+    color: #bfc4c9;
+    font-size: 4rem;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.header h1:hover {
+    color: #2ab0c3;
+}
+
+/* Content Container */
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px 0;
+    /* Reduced margin between sections */
+}
+
+.about-us h2 {
+    color: #2ab0c3;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Reduced margin between heading and paragraph */
+    transition: color 0.3s ease-in-out;
+}
+
+.about-us h2:hover {
+    color: #bfc4c9;
+}
+
+.mission-text h2,
+.platform-text h2 {
+    color: #2ab0c3;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.mission-text h2:hover,
+.platform-text h2:hover {
+    color: #bfc4c9;
+}
+
+.about-us p,
+.platform-text p,
+.mission-text p {
+    font-size: 2em;
+    line-height: 1.8;
+    text-align: center;
+    color: #bfc4c9;
+    margin: 10px 0;
+}
+
+/* Mission Section */
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.mission-text {
+    flex: 1;
+    margin-right: 200px;
+}
+
+.mission-img {
+    flex: 1;
+}
+
+.mission-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: slideRightDust 7s ease-in-out infinite;
+}
+
+@keyframes slideRightDust {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Platform Section */
+.platform-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.platform-text {
+    flex: 1;
+    margin-left: 200px;
+}
+
+.platform-img {
+    flex: 1;
+    order: -1;
+}
+
+.platform-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: slideUpDust 7s ease-in-out infinite;
+}
+
+@keyframes slideUpDust {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+/* Diversity Icons Section */
+.diversity-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.diversity-icon-item {
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+}
+
+.diversity-icon-item img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.diversity-icon-item h1 {
+    font-size: 1.2em;
+    color: white;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.diversity-icon-item:hover {
+    background-color: #2ab0c3;
+    color: #22323f;
+}
+
+.diversity-icon-item:hover h1 {
+    color: #22323f;
+}

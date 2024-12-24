@@ -20,8 +20,10 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('password');
             $table->enum('role', ['customer', 'service_provider', 'admin'])->default('customer');
+            $table->enum('gender', ['male', 'female']);
             $table->string('service_type')->nullable(); // For service providers
             $table->float('rating')->nullable(); // Rating for service providers
+            $table->float('rate')->nullable();//Rate for service providers
             $table->boolean('availability')->default(true)->nullable(); // For service providers
             $table->rememberToken();
             $table->timestamps();

@@ -17,12 +17,14 @@ class AuthenticatedSessionConstroller extends Controller
         }
 
         $user = Auth::user();
+        Auth::login($user);
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
             'message' => 'Login successful',
             'access_token' => $token,
             'token_type' => 'Bearer',
+            'data'=>$user
         ]);
     }
 

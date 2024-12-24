@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #22323f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    position: relative;
+}
+
+.new-user {
+    margin-top: 15px;
+    /* Add some space above the new-user section */
+    text-align: center;
+    font-size: 14px;
+    color: #bfc4c9;
+}
+
+.new-user a {
+    color: #2ab0c3;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    /* Ensure it shows a pointer when hovering */
+    z-index: 10;
+    /* Ensure the link is clickable and above other elements */
+    position: relative;
+    /* Make sure it's in front of other content */
+}
+
+.new-user a:hover {
+    text-decoration: underline;
+    color: #bfc4c9;
+}
+
+
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #22323f;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    left: -275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+.logo img {
+    width: 400px;
+    height: auto;
+}
+
+.login-image {
+    position: absolute;
+    top: -185px;
+    right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-image img {
+    width: 300px;
+    height: auto;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: #0b0c10;
+}
+
+input::placeholder {
+    color: #bfc4c9;
+}
+
+button.login-btn {
+    padding: 12px;
+    background-color: #2ab0c3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.login-btn:hover {
+    background-color: #2ab0c3;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #c5c6c7;
+}
+
+.show-password input {
+    margin-right: 10px;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    color: #c5c6c7;
+    text-align: center;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #22323f;
+    color: #bfc4c9;
+}
+
+footer p {
+    font-size: 14px;
+}

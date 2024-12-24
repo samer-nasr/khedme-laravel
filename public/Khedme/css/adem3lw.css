@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #22323f;
+    color: #bfc4c9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #22323f;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: #bfc4c9;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header .logo img {
+    width: 150px;
+}
+
+.header .profile-icon img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* Form Section */
+.form-wrapper {
+    background-color: #bfc1c5;
+    /* Outer rectangle */
+    padding: 20px;
+    border-radius: 30px;
+    /* Rounded corners */
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background-color: #737373;
+    /* Inner rectangle */
+    padding: 20px;
+    border-radius: 30px;
+    /* Rounded corners */
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-picture-wrapper {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #bfc4c9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-label {
+    color: #22323f;
+    background-color: #26adc8;
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin-top: 0px;
+}
+
+.profile-input {
+    display: none;
+    /* Hide file name input field */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 80px;
+    /* Adjusted margin to avoid overlap */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.form-group label {
+    background-color: #26adc8;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+}
+
+.submit-btn {
+    text-align: center;
+}
+
+.submit-btn button {
+    padding: 12px 30px;
+    background-color: #26adc8;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.submit-btn button:hover {
+    background-color: #00a2d3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #22323f;
+    color: #bfc4c9;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

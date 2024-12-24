@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
+use App\Models\service;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -31,5 +33,27 @@ class BookingController extends Controller
         $booking = Booking::create($validatedData);
 
         return response()->json($booking, 201);
+    }
+
+    public function show_service_provider_bookings($id)
+    {
+        $bookings = Booking::where('service_provider_id',$id)->get();
+
+        return response()->json($bookings);
+    }
+
+    public function show_customer_bookings($id)
+    {
+        $bookings = Booking::where('customer_id',$id)->get();
+
+        return response()->json($bookings);
+    }
+
+    public function show_services_bookings()
+    {
+    
+        $bookings = service::with('bookings')->get();
+
+        return response()->json($bookings);
     }
 }

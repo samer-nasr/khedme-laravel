@@ -39,6 +39,7 @@ class RegisteredUserConstroller extends Controller
 
 
         return response()->json([
+            'message' => 'User Created Successfully!',
             'user' => $user,
             'token' => $token,
         ], 201);

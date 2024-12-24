@@ -31,7 +31,8 @@ class UserFactory extends Factory
             'address' => $this->faker->address,
             'password' => Hash::make('password'), // default password
             'role' => $this->faker->randomElement(['customer', 'service_provider']),
-            'service_type' => $this->faker->randomElement(['plumbing', 'cleaning', 'electrician', 'gardening']),
+            'gender' => $this->faker->randomElement(['male', 'female']),
+            'service_type' => $this->faker->randomElement(['plumber', 'cleaner', 'electrician', 'painter' , 'Pest Control Specialist' , 'HVAC Technician']),
             'rating' => $this->faker->optional()->randomFloat(2, 1, 5), // Optional rating for service providers
             'availability' => $this->faker->boolean(80), // 80% chance of being available
         ];
@@ -54,6 +55,8 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'role' => 'service_provider',
+                'rate' => $this->faker->randomFloat(2, 12, 25),
+                'rating' => $this->faker->randomFloat(2, 1, 5), // Optional rating for service providers
             ];
         });
     }

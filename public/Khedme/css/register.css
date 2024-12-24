@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #22323f;
+    color: #bfc4c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 90vh;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.cleaner-img {
+    width: 350px;
+    height: auto;
+}
+
+/* Dust Animation */
+.dust {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(150, 150, 150, 0.5) 10%, transparent 70%);
+    opacity: 3;
+    animation: blowDust 2s ease-in-out infinite;
+}
+
+@keyframes blowDust {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(30px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(60px) scale(1.4);
+        opacity: 0;
+    }
+}
+
+.right-section {
+    flex: 1;
+    background-color: #838485;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+   
+}
+
+form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="Repassword"] {
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    color: #0b0c10;
+    width: 100%;
+}
+
+button.register-btn {
+    padding: 10px;
+    background-color: #22323f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button.register-btn:hover {
+    background-color: #1a2d3f;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #22323f;
+    color: #bfc4c9;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
