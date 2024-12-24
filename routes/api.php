@@ -51,7 +51,7 @@ Route::get('/get_reviews/{id}', [ReviewControlle::class, 'show']);
 
 
 Route::get('/test', function () {
-    dd('test');
+    dd('Test Api');
 });
 
 // Route::get('/users', [UserController::class, 'index']);
